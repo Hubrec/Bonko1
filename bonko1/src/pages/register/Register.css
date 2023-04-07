@@ -1,0 +1,13 @@
+.register {
+    /* Layout Properties */
+    top: 0px;
+    left: 0px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+    /* UI Properties */
+    background: #802922;
+}
