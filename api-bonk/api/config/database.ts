@@ -20,10 +20,6 @@ const loadDatabase = (db: Database): void => {
 
     const sql = `
 
-        DROP TABLE IF EXISTS comment;
-        DROP TABLE IF EXISTS announcement;
-        DROP TABLE IF EXISTS user;
-
         CREATE TABLE IF NOT EXISTS user
         (
             id INTEGER PRIMARY KEY AUTOINCREMENT,
