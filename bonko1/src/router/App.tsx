@@ -8,35 +8,37 @@ import {
 import Mock from '../pages/Mock/Mock';
 import Login from '../pages/login/Login';
 import Register from '../pages/register/Register';
+import Index from '../pages/index/Index';
+import NewAnnounce from '../pages/NewAnounces/NewAnnounce';
 
 function App() {
   return (
     <Router>
       <nav>
         <ul>
-          <li>
+          <li className='login-nav'>
             <Link to="/login">Login</Link>
           </li>
-          <li>
+          <li className='register-nav'>
             <Link to="/register">Register</Link>
           </li>
-          <li>
-            <Link to="/">Home</Link>
+          <li className='home-nav'>
+            <Link to="/">Announces</Link>
           </li>
-          <li>
-            <Link to="/profile">Profile</Link>
-          </li>
-          <li>
+          <li className='announce-nav'>
             <Link to="/new">New announce</Link>
+          </li>
+          <li className='profile-nav'>
+            <Link to="/profile">Profile</Link>
           </li>
         </ul>
       </nav>
       <Routes>
         <Route path={'/login'} element={<Login />} />
         <Route path={'/register'} element={<Register />} />
-        <Route path={'/'} element={<Mock />} />
+        <Route path={'/'} element={<Index />} />
         <Route path={'/profile'} element={<Mock />} />
-        <Route path={'/new'} element={<Mock />} />
+        <Route path={'/new'} element={<NewAnnounce />} />
       </Routes>    
     </Router>
   );
